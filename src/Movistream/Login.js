@@ -1,14 +1,15 @@
 import React, { use, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import './login.css';
+import "./login.css";
+import api from "./api";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!email || !password) {
@@ -25,49 +26,50 @@ const Login = () => {
     //   setError("Invalid username or password.");
     // }
 
-    try{
-      await axios.post("http://localhost:9091/login", {
-        username: email,
-        password: password,
-        role: "user"
-      })
-      .then((res) => {
-        if(res.data === "user") {
-          navigate("/home")
-        } else if(res.data === "admin"){
-          navigate("/AdminDashboard")
-        }
-      })
-    } catch(err) {
-      console.log(err)
+    try {
+      await api
+        .post("/login", {
+          username: email,
+          password: password,
+          role: "user",
+        })
+        .then((res) => {
+          if (res.data === "user") {
+            navigate("/home");
+          } else if (res.data === "admin") {
+            navigate("/AdminDashboard");
+          }
+        });
+    } catch (err) {
+      console.log(err);
     }
   };
-  
 
   return (
-    <div className="login" >
-       <div className="login-bg" />
+    <div className="login">
+      <div className="login-bg" />
       <div className="login-box">
-      <h2 className="text">Login</h2>
-      <form onSubmit={handleSubmit} >
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          style={styles.input}
-        />
-        <input 
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          style={styles.input}
-        />
-        {error && <p>{error}</p>}
-        <button type="submit" className="button">Login</button>
-       <div className="options">
-          
+        <h2 className="text">Login</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            style={styles.input}
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            style={styles.input}
+          />
+          {error && <p>{error}</p>}
+          <button type="submit" className="button">
+            Login
+          </button>
+          <div className="options">
             <span>Need help?</span>
           </div>
         </form>
@@ -87,7 +89,6 @@ const styles = {
     border: "1px solid #ccc",
     borderRadius: "10px",
     textAlign: "center",
-   
   },
   form: {
     display: "flex",
@@ -112,6 +113,5 @@ const styles = {
     margin: 0,
   },
 };
-
 
 export default Login;
