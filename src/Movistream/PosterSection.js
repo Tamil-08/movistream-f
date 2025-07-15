@@ -39,7 +39,7 @@ const PosterSection = ({ title, posters }) => {
                 ) : (
                   <iframe
                     className="poster-media"
-                    src={`${poster.trailer.replace("watch?v=", "embed/")}?autoplay=1&mute=1&controls=0&loop=1`}
+                    src={`${poster.trailer.replace("watch?v=", "embed/")}?autoplay=1&mute=1&controls=0&loop=1&modestbranding=1&rel=0&showinfo=0`}
                     title="Trailer"
                     frameBorder="0"
                     allow="autoplay; encrypted-media"

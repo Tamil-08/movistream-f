@@ -37,7 +37,7 @@
 .video-container {
   position: relative;
   width: 100%;
-  flex-grow: 1;
+  height: 100%; /* or height: 60vh; */
   background: black;
 }
 
@@ -97,11 +97,17 @@
 
 .player-wrapper {
   position: relative;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
 }
+
+.player-wrapper > .react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+s
 
 .skip-button,
 .next-button {

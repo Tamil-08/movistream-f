@@ -15,6 +15,8 @@ const WatchPage = () => {
     navigate(-1);
   };
 
+  console.log(state?.trailerUrl)
+
   const handleSeek = (seconds) => {
     if (videoRef.current) {
       videoRef.current.seekTo(videoRef.current.getCurrentTime() + seconds, "seconds");
@@ -27,38 +29,31 @@ const WatchPage = () => {
     setDuration(`${min}:${sec < 10 ? "0" + sec : sec}`);
   };
 
+  const getVideoId = (url) => {
+    if (!url) return "";
+    const match = url.match(/v=([^&]+)/);
+    return match ? match[1] : "";
+  };
+
+
   return (
     <div className="watch-page">
       <div className="top-bar">
         <button onClick={handleBack} className="back-btn">⬅</button>
-        <h3 className="title">Now Watching</h3>
-        <div className="controls-right">
-          <span className="option">Video Quality HD</span>
-          <span className="option">Audio & Subtitles</span>
-        </div>
       </div>
 
       <div className="video-container">
-        <ReactPlayer
-          url={state?.trailerUrl}
-          playing={playing}
-          controls={false}
-          width="100%"
-          height="100%"
-          ref={videoRef}
-          onDuration={handleDuration}
-        />
-        <div className="custom-controls">
-          <button onClick={() => handleSeek(-10)}>⏪ 10</button>
-          <button onClick={() => setPlaying(!playing)}>{playing ? "⏸" : "▶️"}</button>
-          <button onClick={() => handleSeek(10)}>10 ⏩</button>
-          <span className="duration">{duration}</span>
-          <button onClick={() => document.querySelector(".video-container").requestFullscreen()}>⛶</button>
+        <div className="player-wrapper">
+          <iframe
+            className="poster-media"
+            src={`${state?.trailerUrl.replace("watch?v=", "embed/")}?autoplay=1&mute=1&controls=0&loop=1&modestbranding=1&rel=0&showinfo=0&playlist=${getVideoId(state?.trailerUrl)}`}
+            title="Trailer"
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+          />
         </div>
-      </div>
 
-      <div className="more-like">
-        <h4>More Like This ⬆</h4>
       </div>
     </div>
   );
