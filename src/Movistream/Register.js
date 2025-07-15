@@ -13,6 +13,10 @@ const RegisterPage = () => {
 
   const handleRegister = async (e) => {
     e.preventDefault();
+    if(password !== confirmPassword){
+      alert("Password doesn't match.")
+      return
+    }
     try {
       await api
         .post("/use", {
