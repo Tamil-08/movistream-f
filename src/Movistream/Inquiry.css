@@ -1,0 +1,64 @@
+.contactus {
+  font-family: Arial, sans-serif;
+}
+
+.inquiry{
+  background-image: url("https://wallpapercat.com/w/full/9/5/a/945731-3840x2160-desktop-4k-matte-black-wallpaper-image.jpg");
+
+ background-repeat:no-repeat;
+ background-position: center;
+ background-size: cover;
+
+ 
+}
+.inquiry1{
+   background-image: url("https://img.freepik.com/premium-photo/gradient-bottle-brown-rough-abstract-background-design_851755-354343.jpg?semt=ais_hybrid&w=740");
+}
+.backimg-testimonial {
+  background: #111;
+  color: white;
+   background-image: url("https://img.freepik.com/premium-photo/gradient-bottle-brown-rough-abstract-background-design_851755-354343.jpg?semt=ais_hybrid&w=740");
+}
+.testimonial-center{
+
+  text-align: center;
+  
+}
+
+.testi-box {
+  min-height: 200px;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.testi-color-1 {
+  background-color: #333;
+  background-image: url("https://img.freepik.com/free-photo/abstract-red-background-vertical-lines-strips_1258-108652.jpg");
+
+}
+
+.testi-color-2 {
+  background-color: #444;
+   background-image: url("https://img.freepik.com/free-photo/abstract-red-background-vertical-lines-strips_1258-108652.jpg");
+}
+
+.testi-color-3 {
+  background-color: #555;
+   background-image: url("https://img.freepik.com/free-photo/abstract-red-background-vertical-lines-strips_1258-108652.jpg");
+}
+
+@media (max-width: 768px) {
+  .testi-box {
+    padding: 30px 10px;
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+

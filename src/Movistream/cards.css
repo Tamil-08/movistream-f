@@ -1,0 +1,545 @@
+.row-cont{
+    margin: auto;
+    padding: 10px;
+    color: #fff;
+     cursor: pointer;
+     background-color: #040404;
+    
+
+}
+
+
+/* .row{
+    margin-left: 20px;
+    color: #fff;
+     cursor: pointer;
+     background-color: #040404;
+    
+
+}
+
+.posters{
+    display: flex;
+    padding: 20px;
+    overflow-x: scroll;
+    overflow-y:hidden ;
+   
+}
+
+.posters::-webkit-scrollbar{
+    display: none; 
+    overflow-y: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #6c5ce7 #dfe6e9;
+}
+.posters::-webkit-scrollbar:hover{
+     transition: transform .3s;
+  -ms-transform: scale(0.9);
+  -webkit-transform: scale(0.9);  
+  transform: scale(1.1);
+  scroll-behavior: smooth;
+}
+
+.poster::-webkit-scrollbar {
+  width: 8px;
+}
+
+.poster::-webkit-scrollbar-track {
+  background: #dfe6e9;
+  
+}
+
+.home::-webkit-scrollbar-thumb {
+  background-color: #6c5ce7;
+  border-radius: 4px;
+  
+}
+
+
+.poster{
+    max-height: 250px;
+    margin-right: 10px;
+    border-radius: 7px;
+     border: rgb(255, 255, 255);
+     
+
+}
+
+.poster:hover{
+     transition: transform .3s;
+  -ms-transform: scale(0.9);
+  -webkit-transform: scale(0.9);  
+  transform: scale(1.1);
+}
+
+
+.header-slider{
+ display: flex;
+ gap: 2%;
+ border: rgb(255, 255, 255);
+ border-radius: 2%;
+ cursor: pointer;
+
+}
+
+
+.fancy-button {
+  background-color: #040404;
+  color: white;
+  border:#fbfbfb;
+   margin-left:32% ;
+   padding: 10px 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.fancy-button:hover {
+  background-color: #f00303;
+  transform: scale(1.05);
+}
+
+.home{
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.home:hover{
+    color: red;
+}
+
+.img{
+    width: 18rem;
+    
+}
+.img:hover{
+ transition: transform .3s;
+  -ms-transform: scale(0.9);
+  -webkit-transform: scale(0.9);  
+  transform: scale(1.1);
+
+}
+
+.tv-slider{
+    display: flex;
+ gap: 2%;
+ border: white;
+ border-radius: 2%;
+ cursor: pointer;
+}
+
+.tv{
+     color: white;
+    cursor: pointer;
+}
+
+.tv:hover{
+    color: var(--dark);
+}
+
+.Movies-slider{
+display: flex;
+ gap: 2%;
+ border: white;
+ border-radius: 2%;
+ cursor: pointer;
+}
+
+.Movies{
+    color: white;
+    cursor: pointer;
+}
+
+.Movies:hover{
+    color: var(--dark); 
+}
+
+.anime-slider{
+    display: flex;
+ gap: 2%;
+ border: white;
+ border-radius: 2%;
+ cursor: pointer;
+}
+
+.anime{
+     color: white;
+    cursor: pointer;
+}
+.anime:hover{
+    color: var(--dark);
+}
+
+.recently-added{
+     display: flex;
+ gap: 2%;
+ border: white;
+ border-radius: 2%;
+ cursor: pointer;
+}
+
+.added{
+     color: white;
+    cursor: pointer;
+}
+
+.added:hover{
+    color: var(--dark);
+}
+
+.web-series{
+     display: flex;
+ gap: 2%;
+ border: white;
+ border-radius: 2%;
+ cursor: pointer;
+}
+
+.web{
+    color: white;
+    cursor: pointer;
+}
+
+.web:hover{
+    color: var(--dark);
+} */
+
+/* .root-container{
+  margin: auto;
+}
+
+.stream-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.stream-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stream-info {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: white;
+  max-width: 600px;
+  z-index: 10;
+}
+
+.stream-title {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.stream-description {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.stream-buttons {
+  display: flex;
+  gap: 12px;
+} */
+
+.play-btn,
+.back-btn {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.play-btn:hover,
+.back-btn:hover {
+  /* background-color: #f40612; */
+}
+.row{
+    background-color: black;
+    color: white;
+}
+.posters {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 16px;
+  padding: 0 20px;
+}
+
+.posters::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+.poster-wrapper {
+  flex: 0 0 auto; /* Prevent wrapping */
+  width: 130px;
+  text-align: center;
+}
+
+.poster-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.poster {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.poster-container:hover .poster {
+  transform: scale(1.05);
+}
+
+.play-button {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: white;
+  font-size: 14px;
+  border-radius: 50%;
+  padding: 10px 14px;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.poster-container:hover .play-button {
+  opacity: 1;
+}
+
+.poster-title {
+  color: white;
+  font-size: 14px;
+  margin-top: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* 
+
+.trailer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.trailer-content {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.close-button {
+  position: absolute;
+  top: -20px;
+  right: -10px;
+  font-size: 24px;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+} */
+
+.trailer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.trailer-content {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.close-button {
+  position: absolute;
+  top: -20px;
+  right: -10px;
+  font-size: 24px;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.poster-container {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.poster-container iframe,
+.poster-container video,
+.poster-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  border: none;
+}
+
+
+.row-cont {
+  padding: 20px;
+}
+
+.home {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.posters {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 16px;
+}
+
+.poster-wrapper {
+  background: #1b1b1b;
+  border-radius: 8px;
+  width: 320px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.poster-wrapper:hover {
+  transform: scale(1.05);
+  z-index: 5;
+}
+
+.poster-container {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background: #000;
+}
+
+.poster,
+.poster-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+}
+
+.poster-info {
+  padding: 10px;
+  color: #ccc;
+}
+
+.poster-title {
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.poster-genre {
+  font-size: 13px;
+  color: #999;
+}
+
+.poster-description {
+  font-size: 12px;
+  margin-top: 4px;
+  color: #bbb;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+.horizontal-scroll::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 4px;
+}
+
+
+
+.popup {
+  position: absolute;
+  top: 0;
+  left: 190px;
+  z-index: 99;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.poster-wrapper:hover .popup {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
